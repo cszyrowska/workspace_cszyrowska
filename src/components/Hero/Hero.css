@@ -1,0 +1,74 @@
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   background-color: #848a62;
+  background-size: cover; /* Ensure the image covers the full background */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#backgroundCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Keep the canvas behind the text but on top of the background */
+  opacity: 1; /* Slightly reduce opacity for faded background */
+}
+
+.hero-text {
+  text-align: center;
+  max-width: 800px;
+  z-index: 1; /* Ensure text stays above canvas and background */
+  background-color: #eae1d2; /* Soft translucent background */
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for cozy effect */
+}
+
+.hero-text h1 {
+  font-size: 80px;
+  font-weight: 700;
+  margin: 0;
+  color: #6b7050; /* Warm brown for vintage typography */
+  font-family: 'Courier New', Courier, monospace; /* Typewriter-style font */
+  animation: spread 5s infinite;
+}
+
+.hero-text p {
+  max-width: 700px;
+  margin: 20px auto;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #000000; /* Muted color for cozy feel */
+  font-family: 'Garamond', serif; /* Classic serif font */
+}
+
+/* Subtle animation for the text */
+@keyframes spread {
+  0%, 100% {
+      letter-spacing: 0px;
+  }
+  50% {
+      letter-spacing: 10px; /* Soft animation */
+  }
+}
+
+/* Optional: Add a light texture effect to the entire hero section */
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #4a4a4a;
+  opacity: 0.5;
+  z-index: -1;
+}

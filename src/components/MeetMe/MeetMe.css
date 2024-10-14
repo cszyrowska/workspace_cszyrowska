@@ -1,0 +1,120 @@
+.MeetMe {
+  background-color: #848a62; /* Light paper background */
+  padding: 60px 0;
+  color: #3b3b3b;
+  font-family: 'Garamond', serif; /* Classic serif font for a vintage feel */
+}
+
+.MeetMe-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.MeetMe-header h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #383b2a;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 20px;
+  
+}
+
+.MeetMe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.MeetMe-item {
+  background: #eae1d2; /* Off-white for a vintage paper-like card */
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #3e2f28; /* Subtle border for a vintage card */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.MeetMe-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Custom styling for the "Your Name" box */
+.MeetMe-photo {
+  text-align: center;
+}
+.photo-frame {
+  display: inline-block;
+  padding: 20px;
+  background-color: #eae1d2; /* Light tan background for frame */
+  
+  /* New double border effect */
+  border: 5px double #3e2f28; /* Outer border using double line style in darker color */
+  outline: 6px solid #3e2f28; /* Inner outline border in lighter color for contrast */
+
+  /* Optional: Decorative shadow to add depth */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25), inset 0 0 10px rgba(255, 255, 255, 0.3);
+
+  /* Adding border radius for softer edges */
+  border-radius: 12px;
+  position: relative;
+  transition: box-shadow 0.4s ease-in-out;
+}
+
+/* Hover effect for more interaction */
+.photo-frame:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35), inset 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+
+.MeetMe-photo img {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 5px solid #3e2f28; /* Polaroid-style border */
+}
+
+.your-name {
+  font-size: 30px;
+  color: #3e2f28; /* Warm brown text color */
+  margin-top: 15px;
+  font-family: 'Dancing Script', cursive; /* Vintage-inspired script font */
+}
+
+/* Styles for the hobbies (same as before) */
+.MeetMe-hobby {
+  text-align: left;
+}
+
+.MeetMe-hobby h3 {
+  font-size: 24px;
+  color: #3e2f28; /* Vintage pastel */
+  margin-bottom: 15px;
+  font-family: 'Garamond', serif;
+}
+
+.MeetMe-hobby p {
+  font-size: 16px;
+  color: #3e2f28;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  font-family: 'Garamond', serif;
+}
+
+.hobby-photo {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-top: 20px;
+  border: 5px solid #3e2f28;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out;
+}
+
+.hobby-photo:hover {
+  transform: scale(1.03); /* Slight hover effect for a subtle vintage feel */
+}

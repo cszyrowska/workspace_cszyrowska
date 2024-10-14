@@ -1,0 +1,25 @@
+.services-section {
+    background-color: #848a62; /* Dark background */
+    padding: 60px 10%; /* Cozy padding on all sides */
+    color: #f5ece1; /* Warm off-white text color */
+    font-family: 'Garamond', serif; /* Classic serif font for vintage feel */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow to add depth */
+  }
+  
+  .services-heading {
+    text-align: center;
+    font-size: 32px;
+    color: #383b2a; /* Light color for the heading to stand out on dark background */
+    font-family: 'Courier New', Courier, monospace; /* Typewriter-style font for vintage look */
+    margin-bottom: 20px;
+  }
+  
+  .services-description {
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: center; /* Center the paragraph text */
+    max-width: 800px;
+    margin: 0 auto; /* Center the paragraph in the middle of the container */
+    color: #333; /* Keep the paragraph text in a warm off-white color */
+  }
+  

@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.container {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.btn {
+  background: #b64f4f;
+  color: #995f47;
+  padding: 14px 25px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn img {
+  width: 20px;
+  margin-left: 10px;
+}
+
+/* src/App.css */
+.border-wrapper {
+  /* Outer border */
+  border: 20px solid #705a43; /* Outer border in #50341f */
+  
+  /* Space between the two borders */
+  padding: 20px; /* This creates space between the content and the inner border */
+  background-color: #c8b89f; /* Inner padding background in #936833 */
+
+  box-sizing: border-box;
+  min-height: 100vh; /* Ensures the border takes the full height of the viewport */
+
+  /* Inner border */
+  box-shadow: inset 0 0 0 10px #c8b89f; /* Creates an inner border with #936833 */
+}
+

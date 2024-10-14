@@ -1,0 +1,61 @@
+.section-container {
+  padding: 20px;
+  background-color: #848a62; /* Vintage paper-like background color */
+  overflow: hidden; /* Hide the scrollbar */
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  color: #383b2a;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 20px;
+}
+
+.contents-container {
+  display: flex;
+  flex-wrap: nowrap;
+  cursor: grab;
+  overflow-x: hidden;
+  padding: 20px 0;
+}
+
+.contents-container.active {
+  cursor: grabbing;
+}
+
+.polaroid {
+  flex: 0 0 auto; /* Prevents shrinking and keeps the size fixed */
+  width: 350px; /* Larger width for Polaroid effect */
+  margin-right: 20px; /* Space between Polaroids */
+  background-color: #eae1d2;
+  padding: 5px 15px 20px 15px; /* Less padding on top, more padding at the bottom */
+  border: 2px solid #3e2f28; /* Border mimicking a Polaroid frame */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.polaroid:hover {
+  transform: scale(1.05);
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px; /* Smaller height */
+  object-fit: contain; /* Ensure the whole image is visible without being cropped */
+  margin-bottom: 20px; /* Increased bottom margin */
+  margin-top: 5px; /* Reduced top margin */
+}
+
+.project-title {
+  font-size: 18px;
+  color: #333;
+  padding-top: 5px;
+}
+
+.contents-container::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar */
+}
