@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
 import './Hero.css';
 import img1 from '../../assets/Untitled15_20240904163742.png';
-import img2 from '../../assets/Untitled15_20240904163816.png';
-import img3 from '../../assets/Untitled15_20240904163749.png';
 
 const Hero = () => {
   useEffect(() => {
@@ -12,7 +10,7 @@ const Hero = () => {
     const width = canvas.width = window.innerWidth;
     const height = canvas.height = window.innerHeight;
 
-    const images = [img1, img2, img3,];
+    const images = [img1];
     const numImages = 30;
     const items = [];
 
