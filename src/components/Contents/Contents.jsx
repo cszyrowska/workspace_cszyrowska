@@ -6,7 +6,7 @@ const projects = [
     id: 1,
     title: "Project 1",
     imagePath: "src/assets/SoftOceanPicture.png", // Using relative path from public folder
-    link: "https://link-to-project1.com",
+    link: "https://softocean.net/",
   },
   {
     id: 2,
