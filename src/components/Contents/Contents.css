@@ -16,8 +16,9 @@
   display: flex;
   flex-wrap: nowrap;
   cursor: grab;
-  overflow-x: hidden;
+  overflow-x: scroll; /* Allow horizontal scrolling */
   padding: 20px 0;
+  scroll-behavior: smooth;
 }
 
 .contents-container.active {
@@ -26,10 +27,10 @@
 
 .polaroid {
   flex: 0 0 auto; /* Prevents shrinking and keeps the size fixed */
-  width: 350px; /* Larger width for Polaroid effect */
+  width: 300px; /* Adjusted width for better fit on smaller screens */
   margin-right: 20px; /* Space between Polaroids */
   background-color: #eae1d2;
-  padding: 5px 15px 20px 15px; /* Less padding on top, more padding at the bottom */
+  padding: 5px 15px 20px 15px;
   border: 2px solid #3e2f28; /* Border mimicking a Polaroid frame */
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   text-align: center;
@@ -44,10 +45,10 @@
 
 .project-image {
   width: 100%;
-  height: 200px; /* Smaller height */
-  object-fit: contain; /* Ensure the whole image is visible without being cropped */
-  margin-bottom: 20px; /* Increased bottom margin */
-  margin-top: 5px; /* Reduced top margin */
+  height: 180px; /* Adjusted height for smaller screens */
+  object-fit: contain;
+  margin-bottom: 15px;
+  margin-top: 5px;
 }
 
 .project-title {
@@ -56,6 +57,38 @@
   padding-top: 5px;
 }
 
+/* Hide scrollbar for WebKit browsers */
 .contents-container::-webkit-scrollbar {
-  display: none; /* Hide the scrollbar */
+  display: none;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 28px;
+  }
+
+  .polaroid {
+    width: 250px; /* Smaller width for mobile devices */
+    margin-right: 15px; /* Reduced spacing */
+  }
+
+  .project-image {
+    height: 150px; /* Smaller image height for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 24px;
+  }
+
+  .polaroid {
+    width: 200px; /* Further reduced width for very small screens */
+    margin-right: 10px;
+  }
+
+  .project-image {
+    height: 120px; /* Smaller image for very small screens */
+  }
 }
