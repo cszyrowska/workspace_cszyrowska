@@ -2,9 +2,9 @@
   width: 100%;
   padding: 50px 0;
   background-color: #848a62; /* Soft, cozy background */
-  font-family: 'Garamond', serif; /* Classic serif font for a vintage feel */
-  padding-left: 5%;  /* Add padding on the left */
-  padding-right: 5%; /* Add padding on the right */
+  font-family: 'Garamond', serif;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .section-title {
@@ -16,13 +16,12 @@
 }
 
 .experience-section {
-  width: 90%; /* Slightly reduce the width to give more space around the section */
+  width: 90%;
   margin: 0 auto;
-  padding-left: 10px; /* Optional: extra padding for smaller spacing inside */
-  padding-right: 10px;
+  padding: 10px;
 }
 
-/* Two-column layout: alternating text and images */
+/* Experience item layout */
 .experience-item {
   display: flex;
   flex-direction: row;
@@ -32,13 +31,13 @@
   background-color: #eae1d2;
   border: 1px solid #3e2f28;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for coziness */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .experience-item:hover {
   transform: translateY(-3px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle hover effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Experience text content styling */
@@ -49,7 +48,7 @@
 
 .experience-content h3 {
   font-size: 26px;
-  color: #3e2f28; /* Warm brown vintage heading */
+  color: #3e2f28;
   margin-bottom: 15px;
 }
 
@@ -71,7 +70,7 @@
   width: 100%;
   max-width: 300px;
   height: auto;
-  border: 4px solid #3e2f28; /* Soft Polaroid-like border */
+  border: 4px solid #3e2f28;
   margin-bottom: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -87,11 +86,49 @@
   display: none;
 }
 
-/* Optional caption styling */
-.experience-images:after {
-  content: attr(data-caption);
-  display: block;
-  margin-top: 10px;
-  font-size: 14px;
-  color: #6b4e31;
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .experience-item {
+    flex-direction: column; /* Stack items vertically */
+    padding: 20px;
+  }
+
+  .experience-content {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .experience-content h3 {
+    font-size: 22px;
+  }
+
+  .experience-content p {
+    font-size: 14px;
+  }
+
+  .slider img {
+    max-width: 250px; /* Slightly smaller images for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 28px;
+  }
+
+  .experience-item {
+    padding: 15px;
+  }
+
+  .experience-content h3 {
+    font-size: 20px;
+  }
+
+  .experience-content p {
+    font-size: 13px;
+  }
+
+  .slider img {
+    max-width: 200px; /* Further reduce image size for mobile */
+  }
 }

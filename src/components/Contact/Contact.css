@@ -1,49 +1,65 @@
 .contact-section {
-    background-color: #848a62; /* Soft, cozy background */
-    padding: 60px 0; /* Padding for section */
-    color: #eae1d2; /* Warm text color for headings */
-    font-family: 'Garamond', serif; /* Classic serif font for vintage aesthetic */
-    text-align: center; /* Center everything */
-  }
-  
-  .contact-heading {
-    font-size: 32px;
-    color: #383b2a; /* Darker color for the heading */
-    font-family: 'Courier New', Courier, monospace; /* Typewriter-style font for vintage feel */
-    margin-bottom: 40px; /* Space between heading and icons */
-  }
-  
+  background-color: #848a62; /* Soft, cozy background */
+  padding: 60px 20px; /* Padding for section with added side padding for smaller screens */
+  color: #eae1d2; /* Warm text color for headings */
+  font-family: 'Garamond', serif; /* Classic serif font for vintage aesthetic */
+  text-align: center; /* Center everything */
+}
+
+.contact-heading {
+  font-size: 32px;
+  color: #383b2a; /* Darker color for the heading */
+  font-family: 'Courier New', Courier, monospace; /* Typewriter-style font for vintage feel */
+  margin-bottom: 40px; /* Space between heading and icons */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Space between the icons */
+  flex-wrap: wrap; /* Allow icons to wrap on smaller screens */
+}
+
+.icon {
+  font-size: 50px; /* Adjust size of icons */
+  color: #3e2f28; /* Light icon color for vintage contrast */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Smooth hover effect */
+  opacity: 0.8; /* Slight transparency to give a faded, vintage look */
+}
+
+.icon:hover {
+  transform: scale(1.2); /* Scale up the icon slightly when hovered */
+  opacity: 1; /* Make the icon fully visible on hover */
+}
+
+.icon.youtube:hover {
+  color: #FF0000; /* YouTube Red */
+}
+
+.icon.linkedin:hover {
+  color: #0077b5; /* LinkedIn Blue */
+}
+
+.icon.facebook:hover {
+  color: #3b5998; /* Facebook Blue */
+}
+
+.icon.instagram:hover {
+  color: #c13584; /* Instagram Gradient Pink */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
   .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 40px; /* Space between the icons */
+    flex-direction: column; /* Stack icons vertically */
+    gap: 10px; /* Reduce gap between icons */
   }
-  
+
   .icon {
-    font-size: 50px; /* Adjust size of icons */
-    color: #3e2f28; /* Light icon color for vintage contrast */
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Smooth hover effect */
-    opacity: 0.8; /* Slight transparency to give a faded, vintage look */
+    font-size: 40px; /* Reduce icon size */
   }
-  
-  .icon:hover {
-    transform: scale(1.2); /* Scale up the icon slightly when hovered */
-    opacity: 1; /* Make the icon fully visible on hover */
+
+  .contact-heading {
+    font-size: 28px; /* Slightly reduce heading size */
   }
-  
-  .icon.youtube:hover {
-    color: #FF0000; /* YouTube Red */
-  }
-  
-  .icon.linkedin:hover {
-    color: #0077b5; /* LinkedIn Blue */
-  }
-  
-  .icon.facebook:hover {
-    color: #3b5998; /* Facebook Blue */
-  }
-  
-  .icon.instagram:hover {
-    color: #c13584; /* Instagram Gradient Pink */
-  }
-  
+}

@@ -1,6 +1,6 @@
 .MeetMe {
   background-color: #848a62; /* Light paper background */
-  padding: 60px 0;
+  padding: 60px 5%; /* Add responsive side padding */
   color: #3b3b3b;
   font-family: 'Garamond', serif; /* Classic serif font for a vintage feel */
 }
@@ -11,27 +11,25 @@
 }
 
 .MeetMe-header h2 {
-  text-align: center;
   font-size: 32px;
   color: #383b2a;
   font-family: 'Courier New', Courier, monospace;
   margin-bottom: 20px;
-  
 }
 
 .MeetMe-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px;
-  width: 85%;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjust minimum size for better fit */
+  gap: 30px; /* Slightly reduced gap for smaller screens */
+  width: 100%;
   margin: 0 auto;
 }
 
 .MeetMe-item {
-  background: #eae1d2; /* Off-white for a vintage paper-like card */
-  padding: 25px;
+  background: #eae1d2;
+  padding: 20px; /* Slightly reduced padding */
   border-radius: 8px;
-  border: 1px solid #3e2f28; /* Subtle border for a vintage card */
+  border: 1px solid #3e2f28;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
@@ -45,76 +43,112 @@
 .MeetMe-photo {
   text-align: center;
 }
+
 .photo-frame {
   display: inline-block;
-  padding: 20px;
-  background-color: #eae1d2; /* Light tan background for frame */
-  
-  /* New double border effect */
-  border: 5px double #3e2f28; /* Outer border using double line style in darker color */
-  outline: 6px solid #3e2f28; /* Inner outline border in lighter color for contrast */
-
-  /* Optional: Decorative shadow to add depth */
+  padding: 15px; /* Slightly reduced padding */
+  background-color: #eae1d2;
+  border: 5px double #3e2f28;
+  outline: 6px solid #3e2f28;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25), inset 0 0 10px rgba(255, 255, 255, 0.3);
-
-  /* Adding border radius for softer edges */
   border-radius: 12px;
   position: relative;
   transition: box-shadow 0.4s ease-in-out;
 }
 
-/* Hover effect for more interaction */
 .photo-frame:hover {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35), inset 0 0 15px rgba(255, 255, 255, 0.4);
 }
 
-
 .MeetMe-photo img {
   width: 100%;
-  max-width: 220px;
+  max-width: 180px; /* Reduced max width for smaller screens */
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 15px;
-  border: 5px solid #3e2f28; /* Polaroid-style border */
+  border: 5px solid #3e2f28;
 }
 
 .your-name {
-  font-size: 30px;
-  color: #3e2f28; /* Warm brown text color */
-  margin-top: 15px;
-  font-family: 'Dancing Script', cursive; /* Vintage-inspired script font */
+  font-size: 28px; /* Slightly smaller font size */
+  color: #3e2f28;
+  margin-top: 10px;
+  font-family: 'Dancing Script', cursive;
 }
 
-/* Styles for the hobbies (same as before) */
+/* Styles for the hobbies */
 .MeetMe-hobby {
   text-align: left;
 }
 
 .MeetMe-hobby h3 {
-  font-size: 24px;
-  color: #3e2f28; /* Vintage pastel */
-  margin-bottom: 15px;
-  font-family: 'Garamond', serif;
+  font-size: 22px;
+  color: #3e2f28;
+  margin-bottom: 10px;
 }
 
 .MeetMe-hobby p {
   font-size: 16px;
   color: #3e2f28;
-  line-height: 1.7;
+  line-height: 1.6;
   margin-bottom: 15px;
-  font-family: 'Garamond', serif;
 }
 
 .hobby-photo {
   width: 100%;
   border-radius: 10px;
   object-fit: cover;
-  margin-top: 20px;
+  margin-top: 15px;
   border: 5px solid #3e2f28;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease-in-out;
 }
 
 .hobby-photo:hover {
-  transform: scale(1.03); /* Slight hover effect for a subtle vintage feel */
+  transform: scale(1.03);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .MeetMe-header h2 {
+    font-size: 28px;
+  }
+
+  .MeetMe-grid {
+    gap: 20px; /* Reduced gap for tablets */
+  }
+
+  .MeetMe-item {
+    padding: 15px;
+  }
+
+  .your-name {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .MeetMe-header h2 {
+    font-size: 24px;
+  }
+
+  .photo-frame {
+    padding: 10px;
+  }
+
+  .MeetMe-photo img {
+    max-width: 150px;
+  }
+
+  .your-name {
+    font-size: 20px;
+  }
+
+  .MeetMe-hobby h3 {
+    font-size: 20px;
+  }
+
+  .MeetMe-hobby p {
+    font-size: 14px;
+  }
 }

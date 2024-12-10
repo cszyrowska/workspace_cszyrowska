@@ -1,14 +1,39 @@
-.title{
+.title {
     text-align: center;
-    color:rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
     font-size: 15px;
-    font-weight: 600px;
+    font-weight: 600; /* Corrected font-weight */
     text-transform: uppercase;
-    margin: 70px 0 30px;
-}
-.title h2{
+    margin: 50px 0 20px; /* Reduced default margin for better spacing */
+  }
+  
+  .title h2 {
     font-size: 32px;
-    color:rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
     margin-top: 5px;
     text-transform: none;
-}
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .title {
+      font-size: 14px;
+      margin: 40px 0 15px;
+    }
+  
+    .title h2 {
+      font-size: 28px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 13px;
+      margin: 30px 0 10px;
+    }
+  
+    .title h2 {
+      font-size: 24px;
+    }
+  }
+  
