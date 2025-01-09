@@ -64,7 +64,7 @@ const Hero = () => {
       <canvas id='backgroundCanvas'></canvas>
       <div className="hero-text">
         <h1>Media Design</h1>
-        <p>Hi, I'm Cecylia! And I specialise in front-end designing.</p>
+        <p>Hi, I'm Cecylia Szyrowska! And I specialise in front-end designing and copywriting.</p>
       </div>
     </div>
   );

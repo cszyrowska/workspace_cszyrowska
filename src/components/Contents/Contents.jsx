@@ -6,11 +6,11 @@ const projects = [
     id: 1,
     title: 'Project 1',
     imagePath: 'src/assets/SoftOceanPicture.png', // Ensure this path is correct
-    link: 'https://softocean.net/', // This should be the correct link
+    link: 'https://softocean.net/', // Link to SoftOcean
   },
   {
     id: 2,
-    title: 'Project 2',
+    title: 'Example 2',
     imagePath: '/assets/path_to_your_image2.jpg',
     link: 'https://link-to-project2.com',
   },
@@ -20,9 +20,7 @@ const projects = [
     imagePath: '/assets/path_to_your_image3.jpg',
     link: 'https://link-to-project3.com',
   },
-  
 ];
-
 
 const Contents = () => {
   const containerRef = useRef(null);
@@ -67,14 +65,15 @@ const Contents = () => {
       >
         {projects.map((project) => (
           <div key={project.id} className="polaroid">
+            {/* Link wraps the image and title */}
             <a href={project.link} target="_blank" rel="noopener noreferrer">
               <img
-                src={project.imagePath}  // Direct path from the public folder
+                src={project.imagePath}
                 alt={project.title}
                 className="project-image"
               />
+              <div className="project-title">{project.title}</div>
             </a>
-            <div className="project-title">{project.title}</div>
           </div>
         ))}
       </div>
